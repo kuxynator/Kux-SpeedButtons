@@ -23,7 +23,7 @@ local tbgui =
     left_monolith_border = 1,
 
 	border = 1,
-	filename = "__Kux.SpeedButtons__/resources/GUI/50x120.png",
+	filename = "__Kux-SpeedButtons__/resources/GUI/50x120.png",
 	position = {0, 0},
 	size = 50,
 	scale = 1 
@@ -49,7 +49,7 @@ local time_button=
       default_graphical_set =
       {
         type = "composition",
-        filename = "__Kux.SpeedButtons__/resources/GUI/gui_new_st.png",
+        filename = "__Kux-SpeedButtons__/resources/GUI/gui_new_st.png",
         corner_size = {3, 3},
         position = {0, 0}
       },
@@ -58,7 +58,7 @@ local time_button=
 	  hovered_graphical_set =
       {
         type = "composition",
-        filename = "__Kux.SpeedButtons__/resources/GUI/gui_new_st.png",
+        filename = "__Kux-SpeedButtons__/resources/GUI/gui_new_st.png",
         corner_size = {3, 3},
         position = {0, 8}
       },
@@ -66,7 +66,7 @@ local time_button=
       clicked_graphical_set =
       {
         type = "composition",
-        filename = "__Kux.SpeedButtons__/resources/GUI/gui_new_st.png",
+        filename = "__Kux-SpeedButtons__/resources/GUI/gui_new_st.png",
         corner_size = {3, 3},
         position = {0, 16}
       },
@@ -106,7 +106,7 @@ local tb_textfield_style=
 
 		
 		border = 0,
-        filename = "__Kux.SpeedButtons__/resources/GUI/button_all_orange.png",
+        filename = "__Kux-SpeedButtons__/resources/GUI/button_all_orange.png",
         position = {xpos, ypos},
         size = 16,
         scale = 1
@@ -114,7 +114,7 @@ local tb_textfield_style=
 		
 		
     --[[    monolith_image = {
-            filename = "__Kux.SpeedButtons__/resources/GUI/button_all_orange.png",
+            filename = "__Kux-SpeedButtons__/resources/GUI/button_all_orange.png",
             priority = "extra-high-no-scale",
             width = 16,
             height = 16,
