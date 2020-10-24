@@ -1,0 +1,13 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2020-09-24
+  Bugfixes:
+    - fix crash in auto_ch_speed_when if no crafting queue is avaailable
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2020.08.29
+  Info:
+    - Republished for Factorio 1.0
+    - completely based on TimeButtons 0.3.7 by darius456 (https://mods.factorio.com/mod/TimeButtons)
+  License:
+    - MIT

@@ -297,7 +297,11 @@ end)
 
 script.on_event(defines.events.on_tick, function(event)
 
-auto_ch_speed_when()
+try(function() -- quick and dirty: catch the exception
+	auto_ch_speed_when()
+end, function(e)
+	--log
+end)
 
 --[[
 if game.tick%120==0 then
@@ -795,7 +799,6 @@ function auto_ch_speed_when()
 		if game.tick%5==0 then
 		local speedatbegin = global.speedatcrafting
 			for index, player in pairs(game.players) do
-				
 				if (player.crafting_queue_size > 0 and global.chspeedoncraftingonoff == true) or (player.mining_state.mining  == true and global.chspeedonminingonoff == true)  then
 					if global.timer_1 ~= 0 then global.timer_1 = 0 end
 					if global.speedatstartcrafting == 0 then
@@ -815,15 +818,12 @@ function auto_ch_speed_when()
 						end
 						
 						if global.speedatstartcrafting ~= 0 then global.speedatstartcrafting = 0 end
-						if global.timer_1 ~= 0 then global.timer_1 = 0 end
-						
+						if global.timer_1 ~= 0 then global.timer_1 = 0 end							
 					end
 				end
-				
-				
 			end
 		end
-	end	
+	end
 end
 
 function add_time_menu()
@@ -897,6 +897,13 @@ function game_speed_dec()
 	end
 				
 	detect_speed_color_red()
+end
+
+function try(f, catch_f)
+	local status, exception = pcall(f)
+	if not status then
+		catch_f(exception)
+	end
 end
 
 script.on_event("speed_1", function(event) return game_speed_reset() end)
