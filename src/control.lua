@@ -171,7 +171,7 @@ local control = {
 
 		local player = game.get_player(event.player_index)
 
-		if     event.element.name == "settingsbutton" 		then this.settingsbutton(player)
+		if     event.element.name == "settingsbutton" 		then this.settingsbutton_onClick(player)
 		elseif event.element.name == "settingsbutton_2" 	then this.settingsbutton_2_onClick()
 		elseif event.element.name == "time_button_menu_end" then this.time_button_menu_end_onClick(player)
 		elseif event.element.name == "timeinc" 				then this.timeinc_onClick(player)
