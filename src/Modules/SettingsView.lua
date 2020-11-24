@@ -90,7 +90,7 @@ end
 
 SettingsView.drawSpeedMenuForPlayer = function (player)
 
-	--player.print("Draw Time Menu")
+	--player.print("Draw Speed Menu")
 	if player.gui.top.menu_tb ~= nil then return end
 
 	player.gui.top.add({type="frame", name="menu_tb", caption="",direction="vertical"}) --            Speed Buttons Menu
@@ -124,25 +124,30 @@ SettingsView.drawSpeedMenuForPlayer = function (player)
 	player.gui.top.menu_tb.row_1.label_menu_4.style.minimal_width=33
 --	game.player.gui.top.menu_tb.row_1.label_menu_5.style.minimal_width=21
 
+	print("drawSpeedMenuForPlayer: global.button_count="..tostring(global.button_count))
 	for i=1, global.button_count, 1 do
+		print("drawSpeedMenuForPlayer: button "..tostring(i))
+		print("drawSpeedMenuForPlayer: global.button_caption[i] "..global.button_caption[i])
+		print("drawSpeedMenuForPlayer: global.button_speed[i] "..global.button_speed[i])
 		local row_no = i+1
-		player.gui.top.menu_tb.add({type="flow",name="row_" .. row_no,direction="horizontal"})
-		player.gui.top.menu_tb["row_" .. row_no].add({type="label", name="label_menu_4", caption="Button " .. i .. ":"})
-		player.gui.top.menu_tb["row_" .. row_no].add({type="textfield", name="text_menu_0_" .. i, caption="", style="tb_textfield_style"}) 
-		player.gui.top.menu_tb["row_" .. row_no].add({type="textfield", name="text_menu_1_" .. i, caption="",style="tb_textfield_style"})
-		player.gui.top.menu_tb["row_" .. row_no].label_menu_4.style.font="default-bold"
+		local row = player.gui.top.menu_tb.add({type="flow",name="row_" .. row_no,direction="horizontal"})
+		--local row = player.gui.top.menu_tb["row_" .. row_no]
+		row.add({type="label", name="label_menu_4", caption="Button " .. i .. ":"})
+		row.add({type="textfield", name="text_menu_0_" .. i, caption="", style="tb_textfield_style"})
+		row.add({type="textfield", name="text_menu_1_" .. i, caption="", style="tb_textfield_style"})
+		row["label_menu_4"].style.font="default-bold"
 		local mw=80
-		player.gui.top.menu_tb["row_" .. row_no]["text_menu_0_" .. i].style.maximal_width=mw
-		player.gui.top.menu_tb["row_" .. row_no]["text_menu_1_" .. i].style.maximal_width=mw
-		player.gui.top.menu_tb["row_" .. row_no]["text_menu_0_" .. i].style.minimal_width=mw
-		player.gui.top.menu_tb["row_" .. row_no]["text_menu_1_" .. i].style.minimal_width=mw
+		row["text_menu_0_" .. i].style.maximal_width=mw
+		row["text_menu_1_" .. i].style.maximal_width=mw
+		row["text_menu_0_" .. i].style.minimal_width=mw
+		row["text_menu_1_" .. i].style.minimal_width=mw
 		mw=34
-		player.gui.top.menu_tb["row_" .. row_no]["text_menu_0_" .. i].style.minimal_height=mw
-		player.gui.top.menu_tb["row_" .. row_no]["text_menu_1_" .. i].style.minimal_height=mw
-		player.gui.top.menu_tb["row_" .. row_no]["text_menu_0_" .. i].caption = global.button_caption[i]
-		player.gui.top.menu_tb["row_" .. row_no]["text_menu_1_" .. i].caption = global.button_speed[i]
-		if global.button_caption[i] ~= nil then player.gui.top.menu_tb["row_" .. row_no]["text_menu_0_" .. i].text = global.button_caption[i] end
-		if global.button_speed[i] ~= nil then player.gui.top.menu_tb["row_" .. row_no]["text_menu_1_" .. i].text = global.button_speed[i] end
+		row["text_menu_0_" .. i].style.minimal_height=mw
+		row["text_menu_1_" .. i].style.minimal_height=mw
+		row["text_menu_0_" .. i].caption = global.button_caption[i]
+		row["text_menu_1_" .. i].caption = global.button_speed[i]
+		if global.button_caption[i] ~= nil then row["text_menu_0_" .. i].text = global.button_caption[i] end
+		if global.button_speed[i] ~= nil then row["text_menu_1_" .. i].text = tostring(global.button_speed[i]) end
 	end
 
 	player.gui.top.menu_tb.add({type="flow",name="row_preend0",direction="vertical"})
