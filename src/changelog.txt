@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.3
-Date: 2020-11-24
+Version: 1.0.4
+Date: 2020-12-11
   Bugfixes:
     - fix crash on settingsbutton click
     - fix "string expected, got number" crash on in settings UI
