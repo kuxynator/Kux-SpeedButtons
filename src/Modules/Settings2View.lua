@@ -13,9 +13,9 @@ function Settings2View.drawSpeedMenu2ForPlayer(player)
 	player.gui.top.menu_tb_2.row_0.add({type="textfield", name="min_speed", caption="", text="", style="tb_textfield_style"})
 
 	if global.min_time_tmp ~= global.min_time then
-		player.gui.top.menu_tb_2.row_0.min_speed.text=global.min_time_tmp
+		player.gui.top.menu_tb_2.row_0.min_speed.text=tostring(global.min_time_tmp)
 	else
-		player.gui.top.menu_tb_2.row_0.min_speed.text=global.min_time
+		player.gui.top.menu_tb_2.row_0.min_speed.text=tostring(global.min_time)
 	end
 
 	--min_time_tmp
