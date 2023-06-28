@@ -1,12 +1,12 @@
 {
 	"name": "Kux-SpeedButtons",
 	"author": "Kuxynator",
-	"version": "2.0.7",
+	"version": "2.0.5",
 	"title": "Kuxynator's Speed Buttons",
 	"homepage": "",
 	"dependencies": [
 		"base",
-		"Kux-CoreLib >= 2.6.0",
+		"Kux-CoreLib >= 2.2.0",
 		"! TimeButtons"
 	],
 	"description": "Configurable buttons for different game speeds and Auto Speed Change when crafting or mining. Based on TimeButtons by darius456",

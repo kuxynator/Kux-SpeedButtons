@@ -1,11 +1,11 @@
 
-require("__KuxCoreLib__/init")
-require(KuxCoreLib.lua)
-require(KuxCoreLib.Colors)
+KuxCoreLibPath="__Kux-CoreLib__/lib/"
+require(KuxCoreLibPath.."lua")
+require(KuxCoreLibPath.."Colors")
 
 require("Modules.GameSpeed")
 require("Modules.SettingsView")		-- menu_tb
-require("Modules.Settings2View")	-- menu_tb_2
+require("Modules.Settings2View")		-- menu_tb_2
 require("Modules.ButtonsView")		-- tb_frame
 require("Modules.TimeView")			-- time_frame
 
