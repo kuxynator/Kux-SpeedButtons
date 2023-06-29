@@ -1,5 +1,5 @@
 
-require("__KuxCoreLib__/init")
+require("__Kux-CoreLib__/init")
 require(KuxCoreLib.lua)
 require(KuxCoreLib.Colors)
 
