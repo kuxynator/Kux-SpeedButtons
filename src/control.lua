@@ -1,7 +1,9 @@
 
+DataStage="control"
 require("__Kux-CoreLib__/init")
 require(KuxCoreLib.lua)
-require(KuxCoreLib.Colors)
+Colors = require(KuxCoreLib.Colors) --[[@as KuxCoreLib.Colors]]
+Colors.debug_color = Colors.lightblue
 
 require("Modules.GameSpeed")
 require("Modules.SettingsView")		-- menu_tb
